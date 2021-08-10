@@ -19,4 +19,5 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('src\\lib\\bcprov-jdk15on-1.60.jar')
 }
