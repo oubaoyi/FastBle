@@ -2,46 +2,14 @@
 Android Bluetooth Low Energy 蓝牙快速开发框架。
 
 使用简单的方式进行搜索、连接、读写、通知的订阅与取消等一系列蓝牙操作，并实时地得到操作反馈。
+## ProGuard
+
+ If you are using ProGuard you might need to add the following options:
+ -dontwarn com.goiot.blelib.**
+ -keep public class com.goiot.blelib.**{*;}
 
 
-# Preview
-![效果图](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble0.gif) 
-![效果图](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble1.png) 
-![效果图](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble2.png) 
-![效果图](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble3.png)
-![效果图](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble4.png)
-![效果图](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/ble5.png)
-	
-
-# Download
-	<dependency>
-       <groupId>com.clj.fastble</groupId>
-       <artifactId>FastBleLib</artifactId>
-       <version>1.2.1</version>
-	   <type>pom</type>
-	</dependency>
-
-or Gradle:
-
-	compile 'com.clj.fastble:FastBleLib:1.2.1'
-
-FastBle requires at minimum Java 7 or Android 4.0.
-
-
-# ProGuard
-If you are using ProGuard you might need to add the following options:
-
-	-dontwarn com.clj.fastble.**
-	-keep public class com.clj.fastble.**{*;}
-
-
-### [查看1.1.x旧版API说明请点击此处](https://github.com/Jasonchenlijian/FastBle/blob/master/README_1.1.x.md)
-
-
-***
-
-
-# 蓝牙操作经验及FastBle的兼容性说明
+## 蓝牙操作经验及FastBle的兼容性说明
 
 - BLE是蓝牙4.0里面的低功耗规范，Android 4.3以上的系统开始搭载BLE模块，所以FastBle也只支持4.3以上。
 - 不排除某些特殊设备的定制系统去除了BLE模块的情况，使用之前可以先判断当前设备是否支持BLE，再进行后续操作。
@@ -66,7 +34,7 @@ If you are using ProGuard you might need to add the following options:
 
 
 
-# 如何使用
+## 如何使用
 
 - #### 初始化，创建操作对象
 	后续的所有操作方法，均通过当前所创建的BleManager对象来完成
@@ -546,24 +514,3 @@ If you are using ProGuard you might need to add the following options:
     - 示例代码中添加DemoActivity和OperateActivity。前者示范如何使用本框架，后者可以作为蓝牙调试工具，测试蓝牙设备。
 - v1.0.0（2016-09-08) 
 	- 初版
-
-
-## License
-
-	   Copyright 2016 chenlijian
-
-	   Licensed under the Apache License, Version 2.0 (the "License");
-	   you may not use this file except in compliance with the License.
-	   You may obtain a copy of the License at
-
-   		   http://www.apache.org/licenses/LICENSE-2.0
-
-	   Unless required by applicable law or agreed to in writing, software
-	   distributed under the License is distributed on an "AS IS" BASIS,
-	   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	   See the License for the specific language governing permissions and
-	   limitations under the License.
-
-
-
-

@@ -15,3 +15,5 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-dontwarn com.goiot.blelib.**
+-keep public class com.goiot.blelib.**{*;}
